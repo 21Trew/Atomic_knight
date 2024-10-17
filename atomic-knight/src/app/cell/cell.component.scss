@@ -1,0 +1,18 @@
+/* src/app/cell/cell.component.scss */
+@import '../../variables';
+
+.cell {
+  @include cell-size(40px);
+  text-align: center;
+  line-height: 40px;
+
+  &:nth-child(even) { background-color: #fff; }
+  &:nth-child(odd) { background-color: $brown-cell; }
+
+  .row:nth-child(even) & {
+    &:nth-child(even) { background-color: $brown-cell; }
+    &:nth-child(odd) { background-color: #fff; }
+  }
+
+  &.possible-move { background-color: $possible-move-color; }
+}

@@ -1,0 +1,21 @@
+<!-- src/app/board/board.component.html -->
+<main class="board">
+  <section *ngFor="let row of gameService.board; let x = index" class="row">
+    <article *ngFor="let cell of row; let y = index"
+             class="cell"
+             [class.possible-move]="isPossibleMove(x, y)"
+             [class.visited]="cell !== null"
+             (click)="onCellClick(x, y)"
+    >
+      <ng-container *ngIf="cell; else emptyCell">
+        <p>{{ cell }}</p>
+      </ng-container>
+
+      <ng-template #emptyCell>
+        <figure *ngIf="gameService.knightPosition?.x === x && gameService.knightPosition?.y === y">
+          <img ngSrc="/assets/icons/knight.svg" alt="Конь" height="32" width="32">
+        </figure>
+      </ng-template>
+    </article>
+  </section>
+</main>

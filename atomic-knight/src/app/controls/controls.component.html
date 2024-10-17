@@ -1,0 +1,15 @@
+<section class="controls">
+  <p *ngIf="!gameService.isGameStarted">
+    Пожалуйста, выберите клетку, с которой хотите начать игру
+  </p>
+
+  <button (click)="resetGame()">Начать заново</button>
+
+  <p *ngIf="gameService.isGameStarted && gameService.isGameOver() && !gameService.isGameWon()">
+    Игра окончена!
+  </p>
+
+  <p *ngIf="gameService.isGameWon()">
+    Поздравляем! Вы прошли по всем клеткам доски!
+  </p>
+</section>
