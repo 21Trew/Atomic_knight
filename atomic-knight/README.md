@@ -1,27 +1,59 @@
-# AtomicKnight
+# Атомный Конь
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
+Этот проект был создан с помощью [Angular CLI](https://github.com/angular/angular-cli) версии 18.2.8.
 
-## Development server
+## Как запустить игру на любом устройстве
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. **Установите Node.js и npm:**
+  - Убедитесь, что на вашем устройстве установлены [Node.js](https://nodejs.org/) и npm (Node Package Manager). Это необходимо для работы Angular CLI.
 
-## Code scaffolding
+2. **Установите Angular CLI:**
+  - Откройте терминал или командную строку и выполните команду:
+    ```bash
+    npm install -g @angular/cli
+    ```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+3. **Клонируйте репозиторий:**
+  - Склонируйте проект на ваше устройство с помощью Git:
+    ```bash
+    git clone <URL_репозитория>
+    ```
+  - Перейдите в директорию проекта:
+    ```bash
+    cd atomic-knight
+    ```
 
-## Build
+4. **Установите зависимости:**
+  - Выполните команду для установки всех необходимых зависимостей:
+    ```bash
+    npm install
+    ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+5. **Запустите сервер разработки:**
+  - Выполните команду:
+    ```bash
+    ng serve
+    ```
+  - Перейдите по адресу `http://localhost:4200/` в вашем веб-браузере. Приложение автоматически перезагрузится, если вы измените любой из исходных файлов.
 
-## Running unit tests
+## Сборка
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Чтобы собрать проект:
+```bash
+ng build
+```
+Артефакты сборки будут сохранены в каталоге `dist/`
 
-## Running end-to-end tests
+## Запуск модульных тестов
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Запустить модульные тесты с помощью [Karma](https://karma-runner.github.io):
+```bash
+ng test
+```
+## Запуск сквозных тестов
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Запустить сквозные тесты:
+```bash
+ng e2e
+```
+Чтобы использовать эту команду, вам сначала нужно добавить пакет, который реализует возможности сквозного тестирования.
