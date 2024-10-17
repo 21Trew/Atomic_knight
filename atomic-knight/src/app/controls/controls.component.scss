@@ -1,9 +1,8 @@
 /* src/app/controls/controls.component.scss */
 @import '../../variables';
 
-// Остальной код компонента
 .controls {
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
 
   button {
@@ -26,12 +25,11 @@
     font-size: 1.125rem;
 
     &:first-child {
-      color: $game-over-color; // Используйте подходящий цвет для сообщения о начале игры
+      color: $game-over-color;
     }
 
     &:last-child {
-      margin-top: 10px;
-      color: $game-over-color; // Используйте подходящий цвет для сообщения о победе
+      color: $game-over-color;
     }
   }
 }
