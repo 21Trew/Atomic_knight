@@ -47,5 +47,8 @@
 
   // Используется !important, чтобы повысить приоритет этих стилей, иначе nth-child их перекрывает
   &.possible-move { background-color: $possible-move-color !important; }
-  &.visited { background-color: #dda0dd !important; }
+  &.visited {
+    background-color: $visited-cell !important;
+    box-shadow: 0 0 0 1px darken($visited-cell, 10%);
+  }
 }
